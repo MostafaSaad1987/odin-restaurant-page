@@ -1,6 +1,6 @@
 const contentDiv = document.querySelector("#content");
 
-const addContent = () => {
+const AddContent = () => {
     const header = document.createElement("h1");
     header.textContent = "Kooky Cook's Cooks";
 
@@ -16,4 +16,4 @@ const addContent = () => {
     contentDiv.append(header, subText, flavourText, gokuImage);
 }
 
-export { addContent };
+export { AddContent };
