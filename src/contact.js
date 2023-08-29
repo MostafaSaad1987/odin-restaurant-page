@@ -11,9 +11,12 @@ const AddContactInfo = () => {
         { name: "Time Machine", FlavourText: "We're already on the job before you contact us, and it's probably already there.", Number: "335-122" }
     ];
 
+    let contactContent = document.createElement("div");
+    contactContent.id = "contact-content";
+
     for (let method of contactMethods) {
         let newContactCard = document.createElement("div");
-        newContactCard.classList.add("food-item");
+        newContactCard.classList.add("contact-item");
 
         let methodName = method.name;
         let methodText = method.FlavourText;
@@ -29,8 +32,9 @@ const AddContactInfo = () => {
         numP.textContent = methodNumber;
 
         newContactCard.append(nameP, textP, numP);
-        contentDiv.append(newContactCard);
+        contactContent.append(newContactCard);
     }
+    contentDiv.append(contactContent);
 }
 
 export { AddContactInfo };

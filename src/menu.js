@@ -14,6 +14,9 @@ const AddMenuItems = () => {
     header.textContent = "Kooky Cook's Specials";
     contentDiv.append(header);
 
+    let menuContent = document.createElement("div");
+    menuContent.id = "menu-content";
+
     for (let food of foodAvailable) {
         let newFoodCard = document.createElement("div");
         newFoodCard.classList.add("food-item");
@@ -23,13 +26,16 @@ const AddMenuItems = () => {
 
         let newP = document.createElement("p");
         newP.textContent = foodName;
+        newP.classList.add("food-name");
 
         let newImg = document.createElement("img");
+        newImg.classList.add("food-image");
         newImg.src = imgLink;
 
         newFoodCard.append(newImg, newP);
-        contentDiv.append(newFoodCard);
+        menuContent.append(newFoodCard);
     }
+    contentDiv.append(menuContent);
 }
 
 export { AddMenuItems };
