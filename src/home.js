@@ -5,9 +5,11 @@ const AddContent = () => {
     header.textContent = "Kooky Cook's Cooks";
 
     const subText = document.createElement("h2");
+    subText.classList.add("subtitle");
     subText.textContent = "For all your Saiyan needs.";
 
     const flavourText = document.createElement("p");
+    flavourText.classList.add("small-text-home");
     flavourText.textContent = "This is a wonderful restaurant full of different kinds of food. Everything a Saiyan needs.";
 
     const gokuImage = document.createElement("img");
