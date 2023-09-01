@@ -41,7 +41,7 @@ const AddContactInfo = () => {
     setTimeout(() => {
         header.style.opacity = 1;
         contactContent.style.opacity = 1;
-    }, 500);
+    }, 250);
 }
 
 export { AddContactInfo };

@@ -42,7 +42,7 @@ const AddMenuItems = () => {
     setTimeout(() => {
         header.style.opacity = 1;
         menuContent.style.opacity = 1;
-    }, 500);
+    }, 250);
 }
 
 export { AddMenuItems };
