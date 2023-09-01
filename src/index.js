@@ -3,6 +3,8 @@ import { AddMenuItems } from "./menu";
 import { AddContactInfo } from "./contact";
 import './style.css';
 
+
+
 CreateButtons();
 AddContent();
 

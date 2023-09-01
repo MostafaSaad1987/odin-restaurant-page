@@ -1,12 +1,18 @@
 const contentDiv = document.querySelector("#content");
+import puddingImage from '../src/images/Food/puddings.png';
+import paradiseHerbImage from '../src/images/Food/paradise-herb.png';
+import ramenImage from '../src/images/Food/ramendbs.png';
+import mightImage from '../src/images/Food/FOTTOM.png';
+import eggsImage from '../src/images/Food/eggs.png';
+import chocoImage from '../src/images/Food/choco.png';
 
 const foodAvailable = [
-    { name: 'Pudding', link: 'https://static.wikia.nocookie.net/dragonball/images/a/ae/Puddings.png/revision/latest?cb=20201120020120', description: "Almost caused the universe to be destroyed from how good it is." },
-    { name: 'Paradise herb', link: 'https://static.wikia.nocookie.net/dragonball/images/d/d8/Paradise_herb.jpg/revision/latest?cb=20180826194338', description: "Increase your life span by 1,000 years, but you'd have to live on an island alone with a talking turtle." },
-    { name: 'Ramen', link: 'https://static.wikia.nocookie.net/dragonball/images/7/77/RamenDBS.png/revision/latest?cb=20201120020507', description: "Good ol' ramen. Most common food, but tasets especially good from Kooky Cook." },
-    { name: 'Fruit of the Tree of Might', link: 'https://static.wikia.nocookie.net/dragonball/images/7/7a/Dbz_movie3_1193.jpg/revision/latest?cb=20180522175046', description: "Fills you with energy that is extracted from an entire planet." },
-    { name: 'Eggs', link: 'https://static.wikia.nocookie.net/dragonball/images/c/ce/PteroEggs.png/revision/latest?cb=20111227002822', description: "Chicken eggs, Dragon eggs, Demon King eggs, Cell eggs, Magic eggs, you name it." },
-    { name: 'Fancy Chocolates', link: 'https://static.wikia.nocookie.net/dragonball/images/f/f4/Dbz237_-_by_%28dbzf.ten.lt%29_20120329-16570146.jpg/revision/latest?cb=20120331090659', description: "Totally not poisonous." }
+    { name: 'Pudding', link: puddingImage, description: "Almost caused the universe to be destroyed from how good it is." },
+    { name: 'Paradise herb', link: paradiseHerbImage, description: "Increase your life span by 1,000 years, but you'd have to live on an island alone with a talking turtle." },
+    { name: 'Ramen', link: ramenImage, description: "Good ol' ramen. Most common food, but tasets especially good from Kooky Cook." },
+    { name: 'Fruit of the Tree of Might', link: mightImage, description: "Fills you with energy that is extracted from an entire planet." },
+    { name: 'Eggs', link: eggsImage, description: "Chicken eggs, Dragon eggs, Demon King eggs, Cell eggs, Magic eggs, you name it." },
+    { name: 'Fancy Chocolates', link: chocoImage, description: "Totally not poisonous." }
 ];
 
 const AddMenuItems = () => {
