@@ -1,4 +1,5 @@
 const contentDiv = document.querySelector("#content");
+import homeImage from '../src/images/Goku.gif';
 
 const AddContent = () => {
     const header = document.createElement("h1");
@@ -14,7 +15,7 @@ const AddContent = () => {
 
     const gokuImage = document.createElement("img");
     gokuImage.classList.add("goku-eating");
-    gokuImage.src = "https://gifdb.com/images/high/goku-and-gohan-eating-noodles-44xss069dt71aoct.gif";
+    gokuImage.src = homeImage;
 
     let homeContent = document.createElement("div");
     homeContent.id = "home-content";

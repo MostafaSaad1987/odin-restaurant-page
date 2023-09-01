@@ -1,4 +1,7 @@
 const contentDiv = document.querySelector("#content");
+import ITImage from '../src/images/Contact/IT.gif';
+import nimbusImage from '../src/images/Contact/Nimbus.gif';
+import TMImage from '../src/images/Contact/TM.gif';
 
 const AddContactInfo = () => {
     const header = document.createElement("h1");
@@ -6,9 +9,9 @@ const AddContactInfo = () => {
     contentDiv.append(header);
 
     const contactMethods = [
-        { name: "Instant Transmission", FlavourText: "We'll be right there in an instant.", Number: "142-123", Image: "https://media.tenor.com/S7irk8ycZwkAAAAM/teleportation-goku.gif" },
-        { name: "Flying Nimbus", FlavourText: "Someone pure of heart will come flying down from the sky.", Number: "003-003", Image: "https://media.tenor.com/V0kbuapUuewAAAAM/goku-kid.gif" },
-        { name: "Time Machine", FlavourText: "We're already on the job before you contact us, and it's probably already done.", Number: "335-122", Image: "https://static.wikia.nocookie.net/powerlisting/images/8/8f/Trunks_Time_Machine_Dragon_Ball_Z.gif" }
+        { name: "Instant Transmission", FlavourText: "We'll be right there in an instant.", Number: "142-123", Image: ITImage },
+        { name: "Flying Nimbus", FlavourText: "Someone pure of heart will come flying down from the sky.", Number: "003-003", Image: nimbusImage },
+        { name: "Time Machine", FlavourText: "We're already on the job before you contact us, and it's probably already done.", Number: "335-122", Image: TMImage }
     ];
 
     let contactContent = document.createElement("div");
