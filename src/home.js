@@ -1,5 +1,14 @@
 const contentDiv = document.querySelector("#content");
 import homeImage from '../src/images/Goku.gif';
+import favicon from '../src/images/DBIcon.png';
+
+let link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+}
+link.href = favicon;
 
 const AddContent = () => {
     const header = document.createElement("h1");
