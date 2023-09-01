@@ -146,7 +146,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hom
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   AddMenuItems: () => (/* binding */ AddMenuItems)\n/* harmony export */ });\nconst contentDiv = document.querySelector(\"#content\");\n\nconst foodAvailable = [\n    { name: 'Pudding', link: 'https://static.wikia.nocookie.net/dragonball/images/a/ae/Puddings.png/revision/latest?cb=20201120020120', description: \"Almost caused the universe to be destroyed from how good it is.\" },\n    { name: 'Paradise herb', link: 'https://static.wikia.nocookie.net/dragonball/images/d/d8/Paradise_herb.jpg/revision/latest?cb=20180826194338', description: \"Increase your life span by 1,000 years, but you'd have to live on an island alone with a talking turtle.\" },\n    { name: 'Ramen', link: 'https://static.wikia.nocookie.net/dragonball/images/7/77/RamenDBS.png/revision/latest?cb=20201120020507', description: \"Good ol' ramen. Most common food, but tasets especially good from Kooky Cook.\" },\n    { name: 'Fruit of the Tree of Might', link: 'https://static.wikia.nocookie.net/dragonball/images/7/7a/Dbz_movie3_1193.jpg/revision/latest?cb=20180522175046', description: \"Fills you with energy that is extracted from an entire planet.\" },\n    { name: 'Eggs', link: 'https://static.wikia.nocookie.net/dragonball/images/c/ce/PteroEggs.png/revision/latest?cb=20111227002822', description: \"Chicken eggs, Dragon eggs, Demon King eggs, Cell eggs, Magic eggs, you name it.\" },\n    { name: 'Fancy Chocolates', link: 'https://static.wikia.nocookie.net/dragonball/images/f/f4/Dbz237_-_by_%28dbzf.ten.lt%29_20120329-16570146.jpg/revision/latest?cb=20120331090659', description: \"Totally not poisonous.\" }\n];\n\nconst AddMenuItems = () => {\n    const header = document.createElement(\"h1\");\n    header.textContent = \"Kooky Cook's Specials\";\n    contentDiv.append(header);\n\n    let menuContent = document.createElement(\"div\");\n    menuContent.id = \"menu-content\";\n\n    for (let food of foodAvailable) {\n        let newFoodCard = document.createElement(\"div\");\n        newFoodCard.classList.add(\"food-item\");\n\n        let foodName = food.name;\n        let imgLink = food.link;\n\n        let newP = document.createElement(\"p\");\n        newP.textContent = foodName;\n        newP.classList.add(\"food-name\");\n\n        let newImg = document.createElement(\"img\");\n        newImg.classList.add(\"food-image\");\n        newImg.src = imgLink;\n\n        let overlayElement = document.createElement(\"div\");\n        overlayElement.classList.add(\"overlay\");\n\n        let foodDescription = document.createElement(\"div\");\n        foodDescription.classList.add(\"food-description\");\n        foodDescription.textContent = food.description;\n\n        overlayElement.append(foodDescription);\n        newFoodCard.append(newImg, newP, overlayElement);\n        menuContent.append(newFoodCard);\n    }\n\n    header.style.opacity = 0;\n    menuContent.style.opacity = 0;\n    contentDiv.append(menuContent);\n    setTimeout(() => {\n        header.style.opacity = 1;\n        menuContent.style.opacity = 1;\n    }, 250);\n}\n\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   AddMenuItems: () => (/* binding */ AddMenuItems)\n/* harmony export */ });\n/* harmony import */ var _src_images_Food_puddings_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/images/Food/puddings.png */ \"./src/images/Food/puddings.png\");\nconst contentDiv = document.querySelector(\"#content\");\n\n\nconst foodAvailable = [\n    { name: 'Pudding', link: _src_images_Food_puddings_png__WEBPACK_IMPORTED_MODULE_0__, description: \"Almost caused the universe to be destroyed from how good it is.\" },\n    { name: 'Paradise herb', link: 'https://static.wikia.nocookie.net/dragonball/images/d/d8/Paradise_herb.jpg/revision/latest?cb=20180826194338', description: \"Increase your life span by 1,000 years, but you'd have to live on an island alone with a talking turtle.\" },\n    { name: 'Ramen', link: 'https://static.wikia.nocookie.net/dragonball/images/7/77/RamenDBS.png/revision/latest?cb=20201120020507', description: \"Good ol' ramen. Most common food, but tasets especially good from Kooky Cook.\" },\n    { name: 'Fruit of the Tree of Might', link: 'https://static.wikia.nocookie.net/dragonball/images/7/7a/Dbz_movie3_1193.jpg/revision/latest?cb=20180522175046', description: \"Fills you with energy that is extracted from an entire planet.\" },\n    { name: 'Eggs', link: 'https://static.wikia.nocookie.net/dragonball/images/c/ce/PteroEggs.png/revision/latest?cb=20111227002822', description: \"Chicken eggs, Dragon eggs, Demon King eggs, Cell eggs, Magic eggs, you name it.\" },\n    { name: 'Fancy Chocolates', link: 'https://static.wikia.nocookie.net/dragonball/images/f/f4/Dbz237_-_by_%28dbzf.ten.lt%29_20120329-16570146.jpg/revision/latest?cb=20120331090659', description: \"Totally not poisonous.\" }\n];\n\nconst AddMenuItems = () => {\n    const header = document.createElement(\"h1\");\n    header.textContent = \"Kooky Cook's Specials\";\n    contentDiv.append(header);\n\n    let menuContent = document.createElement(\"div\");\n    menuContent.id = \"menu-content\";\n\n    for (let food of foodAvailable) {\n        let newFoodCard = document.createElement(\"div\");\n        newFoodCard.classList.add(\"food-item\");\n\n        let foodName = food.name;\n        let imgLink = food.link;\n\n        let newP = document.createElement(\"p\");\n        newP.textContent = foodName;\n        newP.classList.add(\"food-name\");\n\n        let newImg = document.createElement(\"img\");\n        newImg.classList.add(\"food-image\");\n        newImg.src = imgLink;\n\n        let overlayElement = document.createElement(\"div\");\n        overlayElement.classList.add(\"overlay\");\n\n        let foodDescription = document.createElement(\"div\");\n        foodDescription.classList.add(\"food-description\");\n        foodDescription.textContent = food.description;\n\n        overlayElement.append(foodDescription);\n        newFoodCard.append(newImg, newP, overlayElement);\n        menuContent.append(newFoodCard);\n    }\n\n    header.style.opacity = 0;\n    menuContent.style.opacity = 0;\n    contentDiv.append(menuContent);\n    setTimeout(() => {\n        header.style.opacity = 1;\n        menuContent.style.opacity = 1;\n    }, 250);\n}\n\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/images/Food/puddings.png":
+/*!**************************************!*\
+  !*** ./src/images/Food/puddings.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"9e5a212c66f321c47cda.png\";\n\n//# sourceURL=webpack://odin-restaurant-page/./src/images/Food/puddings.png?");
 
 /***/ })
 
@@ -201,6 +211,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -215,6 +237,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
