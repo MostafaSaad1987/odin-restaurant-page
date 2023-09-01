@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   AddContent: () => (/* binding */ AddContent)\n/* harmony export */ });\n/* harmony import */ var _src_images_Goku_gif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/images/Goku.gif */ \"./src/images/Goku.gif\");\nconst contentDiv = document.querySelector(\"#content\");\n\n\nconst AddContent = () => {\n    const header = document.createElement(\"h1\");\n    header.textContent = \"Kooky Cook's Cooks\";\n\n    const subText = document.createElement(\"h2\");\n    subText.classList.add(\"subtitle\");\n    subText.textContent = \"For all your Saiyan needs.\";\n\n    const flavourText = document.createElement(\"p\");\n    flavourText.classList.add(\"small-text-home\");\n    flavourText.textContent = \"This is a wonderful restaurant full of different kinds of food. Everything a Saiyan needs.\";\n\n    const gokuImage = document.createElement(\"img\");\n    gokuImage.classList.add(\"goku-eating\");\n    gokuImage.src = _src_images_Goku_gif__WEBPACK_IMPORTED_MODULE_0__;\n\n    let homeContent = document.createElement(\"div\");\n    homeContent.id = \"home-content\";\n\n    homeContent.append(header, subText, flavourText, gokuImage);\n\n    homeContent.style.opacity = 0;\n    contentDiv.append(homeContent);\n    setTimeout(() => {\n        homeContent.style.opacity = 1;\n    }, 250);\n}\n\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   AddContent: () => (/* binding */ AddContent)\n/* harmony export */ });\n/* harmony import */ var _src_images_Goku_gif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/images/Goku.gif */ \"./src/images/Goku.gif\");\n/* harmony import */ var _src_images_DBIcon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/images/DBIcon.png */ \"./src/images/DBIcon.png\");\nconst contentDiv = document.querySelector(\"#content\");\n\n\n\nlet link = document.querySelector(\"link[rel~='icon']\");\nif (!link) {\n    link = document.createElement('link');\n    link.rel = 'icon';\n    document.head.appendChild(link);\n}\nlink.href = _src_images_DBIcon_png__WEBPACK_IMPORTED_MODULE_1__;\n\nconst AddContent = () => {\n    const header = document.createElement(\"h1\");\n    header.textContent = \"Kooky Cook's Cooks\";\n\n    const subText = document.createElement(\"h2\");\n    subText.classList.add(\"subtitle\");\n    subText.textContent = \"For all your Saiyan needs.\";\n\n    const flavourText = document.createElement(\"p\");\n    flavourText.classList.add(\"small-text-home\");\n    flavourText.textContent = \"This is a wonderful restaurant full of different kinds of food. Everything a Saiyan needs.\";\n\n    const gokuImage = document.createElement(\"img\");\n    gokuImage.classList.add(\"goku-eating\");\n    gokuImage.src = _src_images_Goku_gif__WEBPACK_IMPORTED_MODULE_0__;\n\n    let homeContent = document.createElement(\"div\");\n    homeContent.id = \"home-content\";\n\n    homeContent.append(header, subText, flavourText, gokuImage);\n\n    homeContent.style.opacity = 0;\n    contentDiv.append(homeContent);\n    setTimeout(() => {\n        homeContent.style.opacity = 1;\n    }, 250);\n}\n\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -177,6 +177,16 @@ eval("module.exports = __webpack_require__.p + \"988c2699e52961de191b.gif\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"aa3de5c06c07c776009c.gif\";\n\n//# sourceURL=webpack://odin-restaurant-page/./src/images/Contact/TM.gif?");
+
+/***/ }),
+
+/***/ "./src/images/DBIcon.png":
+/*!*******************************!*\
+  !*** ./src/images/DBIcon.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f6be73cf00bad10cf2c0.png\";\n\n//# sourceURL=webpack://odin-restaurant-page/./src/images/DBIcon.png?");
 
 /***/ }),
 
