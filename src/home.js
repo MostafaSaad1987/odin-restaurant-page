@@ -19,7 +19,11 @@ const AddContent = () => {
 
     homeContent.append(header, subText, flavourText, gokuImage);
 
+    homeContent.style.opacity = 0;
     contentDiv.append(homeContent);
+    setTimeout(() => {
+        homeContent.style.opacity = 1;
+    }, 250);
 }
 
 export { AddContent };

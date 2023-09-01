@@ -38,17 +38,11 @@ const contactClick = document.querySelector("#contact-button");
 
 document.body.addEventListener("click", (e) => {
     if (e.target.id == "home-button") {
-        contentDiv.innerHTML = "";
-        AddContent();
-        ToggleButton(homeClick);
+        AddStuff(AddContent, homeClick)
     } else if (e.target.id == "menu-button") {
-        contentDiv.innerHTML = "";
-        AddMenuItems();
-        ToggleButton(menuClick);
+        AddStuff(AddMenuItems, menuClick);
     } else if (e.target.id == "contact-button") {
-        contentDiv.innerHTML = "";
-        AddContactInfo();
-        ToggleButton(contactClick);
+        AddStuff(AddContactInfo, contactClick);
     }
 });
 
@@ -57,4 +51,15 @@ function ToggleButton(buttonClicked) {
     menuClick.classList.remove("current-button");
     contactClick.classList.remove("current-button");
     buttonClicked.classList.add("current-button");
+}
+
+function AddStuff(stuffToAdd, buttonToToggle) {
+    for (let i = 0; i < contentDiv.children.length; i++) {
+        contentDiv.children[i].style.opacity = 0;
+    }
+    setTimeout(() => {
+        contentDiv.innerHTML = "";
+        stuffToAdd();
+        ToggleButton(buttonToToggle);
+    }, 250);
 }

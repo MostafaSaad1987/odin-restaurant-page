@@ -34,7 +34,14 @@ const AddContactInfo = () => {
         newContactCard.append(nameP, textP, numP);
         contactContent.append(newContactCard);
     }
+
+    header.style.opacity = 0;
+    contactContent.style.opacity = 0;
     contentDiv.append(contactContent);
+    setTimeout(() => {
+        header.style.opacity = 1;
+        contactContent.style.opacity = 1;
+    }, 500);
 }
 
 export { AddContactInfo };

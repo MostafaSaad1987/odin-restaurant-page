@@ -35,7 +35,14 @@ const AddMenuItems = () => {
         newFoodCard.append(newImg, newP);
         menuContent.append(newFoodCard);
     }
+
+    header.style.opacity = 0;
+    menuContent.style.opacity = 0;
     contentDiv.append(menuContent);
+    setTimeout(() => {
+        header.style.opacity = 1;
+        menuContent.style.opacity = 1;
+    }, 500);
 }
 
 export { AddMenuItems };

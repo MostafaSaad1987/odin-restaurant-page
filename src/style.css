@@ -62,6 +62,8 @@ button:hover {
     background-color: #c36900;
 
     padding: 5px 0;
+
+    z-index: 99;
 }
 
 
@@ -129,6 +131,10 @@ button:hover {
     align-items: center;
 }
 
+
+#content>* {
+    transition: all 0.5s;
+}
 
 /* Media */
 @media (max-width: 1250px) {
